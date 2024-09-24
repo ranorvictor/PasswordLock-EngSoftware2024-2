@@ -1,8 +1,9 @@
 <?php
 
-$dbHost = getenv('DB_HOST');
-$dbUser = getenv('DB_USER');
-$dbPass = getenv('DB_PASS');
+require "vendor/autoload.php";
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 return
 [
@@ -24,11 +25,11 @@ return
         ],
         'development' => [
             'adapter' => 'mysql',
-            'host' => $dbHost,
-            'name' => 'password_lock',
-            'user' => $dbUser,
-            'pass' => $dbPass,
-            'port' => '3306',
+            'host' => $_ENV['DB_HOST'],
+            'name' => $_ENV['DB_NAME'],
+            'user' => $_ENV['DB_USER'],
+            'pass' => $_ENV['DB_PASS'],
+            'port' => $_ENV['DB_PORT'],
             'charset' => 'utf8',
         ],
         'testing' => [
