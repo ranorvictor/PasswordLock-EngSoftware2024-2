@@ -24,10 +24,10 @@ return
         ],
         'development' => [
             'adapter' => 'mysql',
-            'host' => 'localhost',
+            'host' => $dbHost,
             'name' => 'password_lock',
-            'user' => 'password-lock',
-            'pass' => '123',
+            'user' => $dbUser,
+            'pass' => $dbPass,
             'port' => '3306',
             'charset' => 'utf8',
         ],
