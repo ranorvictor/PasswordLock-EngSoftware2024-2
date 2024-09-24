@@ -21,3 +21,4 @@
 /vendors/*
 
 .env
+composer.lock
