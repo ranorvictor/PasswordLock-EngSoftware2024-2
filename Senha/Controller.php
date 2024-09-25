@@ -2,8 +2,6 @@
 
 namespace Senha;
 
-require "Views/Cadastro.php";
-
 class Controller
 {
   public static function novaSenha(): void
@@ -29,4 +27,4 @@ class Controller
   {
     return new Views\Cadastro();
   }
-} 
+}

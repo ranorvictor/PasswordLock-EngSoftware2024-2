@@ -2,8 +2,6 @@
 
 namespace Model;
 
-include ("../public/conexao.php");
-
 class Senha {
   public static function novaSenha($id, $apelido, $plataforma, $usuario, $senha) {
     global $mysqli;
@@ -11,4 +9,4 @@ class Senha {
     $result = $mysqli->query($sql);
     return $result;
   }
-} 
+}
