@@ -2,7 +2,7 @@
 
 namespace Senha;
 
-class Controller
+class View
 {
   
 }
