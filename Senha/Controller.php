@@ -3,6 +3,7 @@
 namespace Senha;
 
 require "Views/Cadastro.php";
+require "Views/ListarSenhas.php";
 
 class Controller
 {
@@ -27,5 +28,12 @@ class Controller
   public static function cadastrarSenha(): Views\Cadastro
   {
     return new Views\Cadastro();
+  }
+
+  public static function listarSenhas(): array
+  {
+    $senhas = \Model\Senha::selecionaTudo();
+    $view = new Views\ListarSenhas();
+    return [$view, $senhas];
   }
 }

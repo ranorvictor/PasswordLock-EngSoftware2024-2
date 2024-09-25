@@ -14,7 +14,8 @@ if ($route == '') {
 } else if ($route == 'apagarSenha') {
   echo "<br>Deletar senha";
 } else if ($route == 'listarSenhas') {
-  echo "<br>Listar senhas";
+  list($view, $senhas) = \Senha\Controller::listarSenhas();
+  echo $view->saida($senhas);
 } else if ($route == 'pesquisarSenha') {
   echo "<br>Listar senhas";
 } else if ($route == 'editarSenha') {
@@ -22,4 +23,4 @@ if ($route == '') {
 } else {
   http_response_code(404);
   echo 'Página não encontrada! Error 404 (Not Found)';
-} 
+}
