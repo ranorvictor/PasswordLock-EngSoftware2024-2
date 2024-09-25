@@ -11,4 +11,4 @@ class Senha {
     $result = $mysqli->query($sql);
     return $result;
   }
-}
+} 

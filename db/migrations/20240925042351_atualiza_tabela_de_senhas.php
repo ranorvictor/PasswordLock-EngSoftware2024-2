@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use Phinx\Migration\AbstractMigration;
 
-final class CriaTabelaDeSenhas extends AbstractMigration
+final class AtualizaTabelaDeSenhas extends AbstractMigration
 {
     /**
      * Change Method.
@@ -20,13 +20,12 @@ final class CriaTabelaDeSenhas extends AbstractMigration
     public function change(): void
     {
         $table = $this->table('senhas');
-        $table->addColumn('id_senha', 'integer')
-            ->addColumn('apelido', 'string')
+
+        $table->addColumn('apelido', 'string')
             ->addColumn('plataforma', 'string')
             ->addColumn('usuario', 'string')
             ->addColumn('senha', 'string')
-            ->addColumn('criado_em', 'datetime')
-            ->addColumn('atualizado_em', 'datetime', ['null' => true])
+            ->addTimestamps("criado_em", "atualizado_em")
             ->create();
     }
 }
