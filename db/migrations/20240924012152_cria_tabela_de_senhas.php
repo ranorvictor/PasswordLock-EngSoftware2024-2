@@ -20,6 +20,9 @@ final class CriaTabelaDeSenhas extends AbstractMigration
     public function change(): void
     {
         $table = $this->table('senhas');
+
+        $table = $this->table('senhas')->addTimestampsWithTimezone(null, 'atualizado_em');
+
         $table->addColumn('id_senha', 'integer')
             ->addColumn('apelido', 'string')
             ->addColumn('plataforma', 'string')

@@ -29,4 +29,4 @@ class Controller
   {
     return new Views\Cadastro();
   }
-}
+} 
