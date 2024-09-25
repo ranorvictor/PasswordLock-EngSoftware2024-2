@@ -9,8 +9,6 @@ $mysqli = new mysqli($_ENV['DB_HOST'], $_ENV['DB_USER'], $_ENV['DB_PASS'], $_ENV
 
 if ($mysqli->connect_error) {
     die("A conexão com o banco de dados: " . $connect->connect_error);
-} else {
-    echo "Conexão com o banco de dados realizada com sucesso!";
 }
 
 ?>

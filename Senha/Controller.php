@@ -18,7 +18,7 @@ class Controller
       \Model\Senha::novaSenha($apelido, $plataforma, $usuario, $senha);
       echo "Senha cadastrada com sucesso!";
 
-      header("Location: index.php");
+      header("Location: index.php?route=listarSenhas");
       die();
     } catch (\Exception $erro) {
       echo "Erro ao cadastrar senha. " . $erro->getMessage();

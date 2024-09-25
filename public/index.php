@@ -6,7 +6,9 @@ require "../Senha/Controller.php";
 $route = $_GET['route'] ?? '';
 
 if ($route == '') {
-  echo "<br>Bem-vindo ao sistema de senhas!";
+  echo "Bem-vindo ao sistema de senhas!";
+  echo "<br><a href='index.php?route=cadastrarSenha'>Cadastrar Senha</a>";
+  echo "<br><a href='index.php?route=listarSenhas'>Ver Senhas</a>";
 } else if ($route == 'novaSenha') {
   \Senha\Controller::novaSenha();
 } else if ($route == 'cadastrarSenha') {

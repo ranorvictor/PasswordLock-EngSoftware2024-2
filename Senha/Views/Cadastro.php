@@ -24,6 +24,10 @@ class Cadastro
         <button type="submit">Enviar</button>
     </form>
     ';
+    $saida .= '<a href="index.php">Inicio</a><br>';
+    $saida .= '<a href="index.php?route=listarSenhas">Ver Senhas</a>';
+
+
     return $saida;
   }
 }

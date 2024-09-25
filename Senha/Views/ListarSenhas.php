@@ -27,6 +27,9 @@ class ListarSenhas
       ';
     }
     $saida .= '</table>';
+    $saida .= '<a href="index.php">Inicio</a><br>';
+    $saida .= '<a href="index.php?route=cadastrarSenha">Nova Senha</a>';
+
     return $saida;
   }
 }
