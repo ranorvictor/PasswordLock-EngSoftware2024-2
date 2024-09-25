@@ -2,18 +2,19 @@
 
 namespace Senha;
 
+require "Views/Cadastro.php";
+
 class Controller
 {
   public static function novaSenha(): void
   {
     try {
-      $id = $_POST['id'];
       $apelido = $_POST['apelido'];
       $plataforma = $_POST['plataforma'];
       $usuario = $_POST['usuario'];
       $senha = $_POST['senha'];
 
-      \Model\Senha::novaSenha($id, $apelido, $plataforma, $usuario, $senha);
+      \Model\Senha::novaSenha($apelido, $plataforma, $usuario, $senha);
       echo "Senha cadastrada com sucesso!";
 
       header("Location: index.php");

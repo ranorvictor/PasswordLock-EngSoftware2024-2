@@ -1,13 +1,16 @@
 <?php
 
 require "../Model/Senha.php";
+require "../Senha/Controller.php";
 
 $route = $_GET['route'] ?? '';
 
 if ($route == '') {
   echo "<br>Bem-vindo ao sistema de senhas!";
 } else if ($route == 'novaSenha') {
-  echo "<br>Editar senha";
+  \Senha\Controller::novaSenha();
+} else if ($route == 'cadastrarSenha') {
+  echo \Senha\Controller::cadastrarSenha()->saida();
 } else if ($route == 'apagarSenha') {
   echo "<br>Deletar senha";
 } else if ($route == 'listarSenhas') {
