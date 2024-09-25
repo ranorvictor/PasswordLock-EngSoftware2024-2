@@ -9,9 +9,6 @@ class Cadastro
     $saida = '
 		<p>Cadastrar uma nova Senha</p>
 		<form action="index.php?route=novaSenha" method="POST">
-        <label for="id">Id:</label>
-        <input type="number" id="id" name="id" required><br><br>
-
         <label for="apelido">Apelido:</label>
         <input type="text" id="apelido" name="apelido" required><br><br>
 
