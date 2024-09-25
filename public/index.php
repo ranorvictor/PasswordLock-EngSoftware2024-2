@@ -18,7 +18,5 @@ if ($route == '') {
   echo "<br>Editar senha";
 } else {
   http_response_code(404);
-  echo 'Page not found (Invalid route)';
+  echo 'Página não encontrada! Error 404 (Not Found)';
 }
-
-echo $view->output($model);
