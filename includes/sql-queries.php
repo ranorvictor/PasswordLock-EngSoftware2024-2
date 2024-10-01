@@ -1,8 +1,6 @@
 <?php
 
-namespace Model;
-
-require "../public/conexao.php";
+require "../config/config.php";
 
 class Senha {
   public static function selecionaTudo() {
@@ -19,3 +17,5 @@ class Senha {
     return $result;
   }
 }
+
+?>
