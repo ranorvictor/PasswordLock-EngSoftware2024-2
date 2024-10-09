@@ -38,22 +38,23 @@ if ($_POST) {
         $_SESSION["e_mail"] = $resultado["e_mail"];
         $_SESSION["usuario"] = $resultado["usuario"];
         $_SESSION["data_nascimento"] = $resultado["data_nascimento"];
-        echo "<script>location.href='public/index.php?arquivo=eventos/listar.php';</script>";
+        echo "<script>location.href='public/index.php';</script>";
     } else {
         echo "Usuário e/ou senha inválidos!";
     }
 }
 ?>
-
-<form action="" method="post">
-    <fieldset>
-        <h1>Login</h1>
-        <label for="usuario">Usuário:
-            <input type="text" name="usuario" placeholder="Usuário"><br>
-        </label>
-        <label for="senha">Senha:
-            <input type="password" name="senha" placeholder="Senha"><br>
-        </label>
-    </fieldset>
-    <button type="submit">Entrar</button>
-</form>
+<div name="loginblock">
+    <form action="" method="post">
+        <fieldset>
+            <h1>Login</h1>
+            <label for="usuario">Usuário:
+                <input type="text" name="usuario" placeholder="Usuário"><br>
+            </label>
+            <label for="senha">Senha:
+                <input type="password" name="senha" placeholder="Senha"><br>
+            </label>
+        </fieldset>
+        <button type="submit">Entrar</button>
+    </form>
+</div>
