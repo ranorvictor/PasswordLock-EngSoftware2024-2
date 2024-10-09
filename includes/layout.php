@@ -9,6 +9,7 @@
 </head>
 
 <body class="flex flex-col min-h-screen">
+    <script src="https://cdn.tailwindcss.com"></script>
     <header class="mt-4">
         <h1 class='mb-6 flex text-3xl font-bold justify-center'>
             <a href="index.php"><img src="../assets/images/Logo.png" alt="Logo Password Lock"></a>
@@ -23,7 +24,6 @@
         <p class="text-center">&copy; 2024 - Password Lock</p>
     </footer>
 
-    <script src="https://cdn.tailwindcss.com"></script>
 </body>
 
 </html>
