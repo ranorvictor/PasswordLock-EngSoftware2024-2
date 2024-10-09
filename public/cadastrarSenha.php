@@ -1,5 +1,13 @@
 <?php
-// Título da página
+include_once("./autenticacaoDeUsuario.php");
+
+$autenticacao = new Login;
+
+if(!$autenticacao->estaLogado()){
+  header("Location: login.php");
+}
+
+// Título da página 
 $title = "Password Lock - Cadastrar Senha";
 
 // Conteúdo específico da página
