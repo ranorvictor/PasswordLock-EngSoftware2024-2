@@ -1,4 +1,11 @@
 <?php
+include_once("./autenticacaoDeUsuario.php");
+
+$autenticacao = new Login;
+
+if(!$autenticacao->estaLogado()){
+  header("Location: login.php");
+}
 
 require "../config/config.php";
 

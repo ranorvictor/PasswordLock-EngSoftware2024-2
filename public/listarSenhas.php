@@ -1,4 +1,12 @@
 <?php
+include_once("./autenticacaoDeUsuario.php");
+
+$autenticacao = new Login;
+
+if(!$autenticacao->estaLogado()){
+  header("Location: login.php");
+}
+
 // Título da página
 $title = "Password Lock - Listar Senhas";
 

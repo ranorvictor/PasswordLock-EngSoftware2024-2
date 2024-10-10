@@ -6,7 +6,7 @@ try {
   $nome = $_POST['nome'];
   $usuario = $_POST['usuario'];
   $email = $_POST['email'];
-  $senha = password_hash($_POST['senha'], PASSWORD_BCRYPT);
+  $senha = md5($_POST['senha']);
 
   global $mysqli;
   $sql = "INSERT INTO usuarios VALUES (NULL, '$nome', '$usuario', '$email', '$senha', NOW(), NOW())";
