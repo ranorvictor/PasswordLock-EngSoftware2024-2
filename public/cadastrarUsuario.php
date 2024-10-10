@@ -1,6 +1,6 @@
 <?php
 // Título da página
-$title = "Password Lock - Cadastrar Senha";
+$titulo = "Password Lock - Cadastrar Senha";
 
 // Conteúdo específico da página
 ob_start(); // Inicia o buffer de saída
@@ -34,4 +34,4 @@ ob_start(); // Inicia o buffer de saída
 $content = ob_get_clean(); // Armazena o conteúdo do buffer na variável $content
 
 // Inclui o layout base
-include '../includes/layoutNaoAutenticado.php';
+include '../includes/formularioDeAutenticacao.php';
