@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $title ?? "Minha Aplicação"; ?></title>
-</head>
+<?php include "head.php"; ?>
 
-<body class="flex flex-col min-h-screen">
-    <script src="https://cdn.tailwindcss.com"></script>
+<body class="min-h-screen bg-cover bg-center flex flex-col" style="background-image: url('../assets/images/Background.jpg');">
     <header class="mt-4">
         <h1 class='mb-6 flex text-3xl font-bold justify-center'>
             <a href="index.php"><img src="../assets/images/Logo.png" alt="Logo Password Lock"></a>
