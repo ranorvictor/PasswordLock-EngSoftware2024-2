@@ -48,7 +48,7 @@ module.exports = {
         'mobile-body-primary': '0.94rem',
         'mobile-body-secondary': '0.81rem',
       }
-    },
+    }
   },
   plugins: [],
 }

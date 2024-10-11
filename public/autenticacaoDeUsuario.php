@@ -25,12 +25,10 @@ class Login
 
     public static function estaLogado()
     {
-        // Iniciar sessão caso ainda não tenha sido iniciada
         if (session_status() === PHP_SESSION_NONE) {
           session_start();
       }
 
-      // Verificar se o id está definido na sessão
       return isset($_SESSION["id_usuario"]) ? $_SESSION["id_usuario"] : false;
     }
 

@@ -7,11 +7,9 @@ if(!$autenticacao->estaLogado()){
   header("Location: login.php");
 }
 
-// Título da página
 $title = "Password Lock - Listar Senhas";
 
-// Conteúdo específico da página
-ob_start(); // Inicia o buffer de saída
+ob_start();
 ?>
 <div class="flex flex-row w-full justify-between mt-6 space-x-4">
   <a href="index.php" class="text-blue-700 hover:underline"><- Inicio</a>
@@ -52,7 +50,6 @@ ob_start(); // Inicia o buffer de saída
   </tbody>
 </table>
 <?php
-$content = ob_get_clean(); // Armazena o conteúdo do buffer na variável $content
+$content = ob_get_clean();
 
-// Inclui o layout base
 include '../includes/layout.php';

@@ -14,7 +14,7 @@
             <div class="flex-1 bg-primary-source rounded-tr-lg rounded-br-lg p-[24px]">
                 <h1 class="font-montserrat text-desktop-h1 font-bold mb-[24px]"><?php echo $tituloDoFormulario; ?></h1>
                 <form action="" method="post" class="flex flex-col gap-[12px]">
-                    <fieldset>
+                    <fieldset class="flex flex-col gap-[12px]">
                         <?php echo $conteudo; ?>
                     </fieldset>
                     <button type="submit" class="w-full py-[8px] text-desktop-cta font-semibold bg-secondary-source text-secondary-700 rounded-md hover:brightness-125 filter transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2">
