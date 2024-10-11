@@ -1,5 +1,6 @@
 <?php
 $titulo = "Password Lock - Cadastrar Usuário";
+$action = 'action="./novoUsuario.php"';
 $tituloDoFormulario = "Cadastro";
 $botao = "Cadastrar";
 $textoPreLink = "Já possui uma conta?";

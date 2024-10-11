@@ -13,7 +13,7 @@
             <img src="../assets/images/hero.png" alt="Um escudo com um cadeado no centro" class="h-auto w-1/2 object-cover rounded-tl-lg rounded-bl-lg">
             <div class="flex-1 bg-primary-source rounded-tr-lg rounded-br-lg p-[24px]">
                 <h1 class="font-montserrat text-desktop-h1 font-bold mb-[24px]"><?php echo $tituloDoFormulario; ?></h1>
-                <form action="" method="post" class="flex flex-col gap-[12px]">
+                <form <?php echo $action ? $action : ""; ?> method="post" class="flex flex-col gap-[12px]">
                     <fieldset class="flex flex-col gap-[12px]">
                         <?php echo $conteudo; ?>
                     </fieldset>

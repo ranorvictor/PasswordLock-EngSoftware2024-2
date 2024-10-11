@@ -40,8 +40,6 @@
             arrow.classList.toggle('rotate-90');
             overlay.classList.toggle('hidden');
 
-
-            // Fecha o modal ao clicar fora dele
             overlay.addEventListener('click', () => {
                 modal.classList.add('hidden');
                 overlay.classList.add('hidden');
