@@ -5,3 +5,7 @@
 .input-autenticacao {
   @apply text-neutral-black text-desktop-body-secondary placeholder-neutral-gray block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none;
 }
+
+.default-x-spacing {
+  @apply mx-auto max-w-[1080px] w-screen px-4;
+}

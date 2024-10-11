@@ -7,7 +7,7 @@ if(!$autenticacao->estaLogado()){
   header("Location: login.php");
 }
 
-$title = "Password Lock - Cadastrar Senha";
+$titulo = "Password Lock - Cadastrar Senha";
 
 ob_start();
 ?>
@@ -40,6 +40,6 @@ ob_start();
   <button type="submit" class="bg-blue-700 text-white font-semibold px-4 py-2 rounded-md hover:bg-blue-800 transition">Enviar</button>
 </form>
 <?php
-$content = ob_get_clean();
+$conteudo = ob_get_clean();
 
-include '../includes/layout.php';
+include '../includes/layoutAutenticado.php';

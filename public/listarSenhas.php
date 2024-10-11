@@ -7,7 +7,7 @@ if(!$autenticacao->estaLogado()){
   header("Location: login.php");
 }
 
-$title = "Password Lock - Listar Senhas";
+$titulo = "Password Lock - Listar Senhas";
 
 ob_start();
 ?>
@@ -50,6 +50,6 @@ ob_start();
   </tbody>
 </table>
 <?php
-$content = ob_get_clean();
+$conteudo = ob_get_clean();
 
-include '../includes/layout.php';
+include '../includes/layoutAutenticado.php';
