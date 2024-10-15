@@ -4,17 +4,47 @@ include_once("./autenticacaoDeUsuario.php");
 $autenticacao = new Login;
 
 if (!$autenticacao->estaLogado()) {
-  header("Location: ./login.php");
+  header("Location: login.php");
 }
 
-$titulo = "Password Lock - Início";
+$titulo = "Password Lock - Listar Senhas";
 
 ob_start();
 ?>
-<div class='w-96 flex flex-col gap-4 m-auto'>
-  <a href='cadastrarSenha.php' class='text-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800'>Cadastrar Senha</a>
-  <a href='listarSenhas.php' class='text-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800'>Listar Senhas</a>
-</div>
+
+<p class="text-lg font-semibold mb-4">Senhas Cadastradas</p>
+<table class="min-w-full border border-gray-300 text-left">
+  <thead>
+    <tr class="bg-gray-100">
+      <th class="py-2 px-4 border-b border-gray-300">Apelido</th>
+      <th class="py-2 px-4 border-b border-gray-300">Plataforma</th>
+      <th class="py-2 px-4 border-b border-gray-300">Usuário</th>
+      <th class="py-2 px-4 border-b border-gray-300">Senha</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php
+    require "../config/config.php";
+
+    try {
+      global $mysqli;
+      $sql = "SELECT * FROM senhas WHERE id IN (SELECT id_senha FROM usuarios_senhas WHERE id_usuario = {$_SESSION['id_usuario']})";
+      $senhas = $mysqli->query($sql);
+    } catch (\Exception $erro) {
+      echo "Erro ao listar senhas. " . $erro->getMessage();
+    }
+
+    while ($senha = $senhas->fetch_assoc()) {
+      echo '<tr class="hover:bg-gray-100">';
+      echo '<td class="py-2 px-4 border-b border-gray-300">' . $senha['apelido'] . '</td>';
+      echo '<td class="py-2 px-4 border-b border-gray-300">' . $senha['plataforma'] . '</td>';
+      echo '<td class="py-2 px-4 border-b border-gray-300">' . $senha['usuario'] . '</td>';
+      echo '<td class="py-2 px-4 border-b border-gray-300">' . $senha['senha'] . '</td>';
+      echo '</tr>';
+    }
+    ?>
+  </tbody>
+</table>
 <?php
 $conteudo = ob_get_clean();
 

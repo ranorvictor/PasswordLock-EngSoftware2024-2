@@ -17,8 +17,11 @@ try {
 
   global $mysqli;
   $sql = "INSERT INTO senhas (apelido, plataforma, usuario, senha) VALUES ('$apelido', '$plataforma', '$usuario', '$senha')";
-  $result = $mysqli->query($sql);
-  
+  $mysqli->query($sql);
+
+  $sql = "INSERT INTO usuarios_senhas (id_usuario, id_senha) VALUES ('{$_SESSION['id_usuario']}', '{$mysqli->insert_id}')";
+  $mysqli->query($sql);
+
   echo "Senha cadastrada com sucesso!";
   
   header("Location: ./listarSenhas.php");
