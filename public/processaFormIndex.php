@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['ids'])) {
       echo "Erro ao excluir os registros: " . $conexao->error;
     }
   } elseif ($acao === 'compartilhar') {
-    header("Location: compartilhar.php?senhas=" . implode(',', $ids));
+    header("Location: compartilharSenha.php?senhas=" . implode(',', $ids));
   }
 } else {
   $pesquisa = $_POST['pesquisa'];
