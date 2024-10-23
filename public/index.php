@@ -16,7 +16,7 @@ ob_start();
     <h1 class="flex-none text-desktop-h1 text-neutral-white font-montserrat font-bold">Minhas Senhas</h1>
     <div class="grow flex flex-row gap-[18px] items-center">
       <span class="sem-selecao flex flex-row gap-[10px] border-2 px-[10px] h-[40px] border-primary-300 rounded-[5px] grow">
-        <input type="text" placeholder="Pesquisar por..." class="grow bg-primary-source text-neutral-white text-desktop-body-secondary placeholder:text-primary-100 placeholder:text-desktop-body-secondary focus:outline-none focus:ring-0 focus:border-transparent">
+        <input type="text" name="pesquisa" placeholder="Pesquisar por..." class="grow bg-primary-source text-neutral-white text-desktop-body-secondary placeholder:text-primary-100 placeholder:text-desktop-body-secondary focus:outline-none focus:ring-0 focus:border-transparent">
         <button type="submit" name="acao" value="pesquisar">
           <img src="../assets/images/Search icon.svg" alt="Ícone de lupa">
         </button>
