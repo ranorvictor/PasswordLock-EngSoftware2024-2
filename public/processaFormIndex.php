@@ -16,10 +16,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['ids'])) {
   global $mysqli;
 
   if ($acao === 'excluir') {
-    $ids_string = implode(',', array_map('intval', $ids)); // Sanitiza os IDs
-    $query = "DELETE FROM usuarios WHERE id IN ($ids_string)";
+    $ids_string = implode(',', array_map('intval', $ids));
+    $query = "DELETE FROM usuarios_senhas WHERE id_senha IN ($ids_string)";
     if ($mysqli->query($query)) {
-      echo "Registros excluídos com sucesso!";
+      header("Location: index.php");
     } else {
       echo "Erro ao excluir os registros: " . $conexao->error;
     }
