@@ -3,7 +3,7 @@ include_once("./autenticacaoDeUsuario.php");
 
 $autenticacao = new Login;
 
-if(!$autenticacao->estaLogado()){
+if (!$autenticacao->estaLogado()) {
   header("Location: login.php");
 }
 
@@ -23,8 +23,8 @@ try {
   $mysqli->query($sql);
 
   echo "Senha cadastrada com sucesso!";
-  
-  header("Location: ./listarSenhas.php");
+
+  header("Location: ./index.php");
   die();
 } catch (\Exception $erro) {
   echo "Erro ao cadastrar senha. " . $erro->getMessage();
